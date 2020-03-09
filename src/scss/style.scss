@@ -1,0 +1,285 @@
+* {
+  font-family: Verdana;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+
+img {
+  width: 100%;
+}
+
+.modal-body {
+  padding: 0px !important;
+  margin: 0px !important;
+}
+
+.row{
+  margin: 0px !important;
+}
+
+
+.mainContainer {
+  margin: 0px !important;
+  padding: 0px !important;
+  .hide4Mobile{
+    display: none;
+  }
+  .logo {
+    .fa-star {
+      color: yellow;
+    }
+  }
+
+  .navbar {
+    background: rgb(65, 65, 190);
+    .fa-search {
+      color: white;
+      margin-right: 1rem;
+      cursor: pointer;
+    }
+    .fa-shopping-cart {
+      color: white;
+    }
+
+    .search-cart {
+      display: flex;
+      align-items: center;
+    }
+    .fa-shopping-cart {
+      position: relative;
+    }
+    .cartLabel {
+      position: absolute;
+      top: 0;
+      background: red;
+      color: white;
+      border-radius: 10px;
+      font-size: 10px;
+      right: 12px;
+      padding: 2px
+    }
+  }
+  .search {
+    margin-right: 1rem;
+    background: rgb(65, 65, 190);
+    border: 0px;
+    border-bottom: 0.5px solid white;
+    color: white;
+    outline: none;
+  }
+  .search::placeholder {
+    color: white;
+  }
+
+  .filter-container {
+    text-align: center;
+    background: #eee;
+    padding: 1rem;
+    margin: 0px !important;
+
+    .sortingCol {
+      border-right: 0.5px solid black;
+      cursor: pointer;
+    }
+
+    .filterCol {
+      cursor: pointer;
+    }
+
+    .fa-sort {
+      margin-right: 0.5rem !important;
+    }
+    .fa-filter {
+      margin-right: 0.5rem !important;
+    }
+  }
+
+  .productContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    .cartBtn {
+      background: #ebaf40;
+      border-radius: 20px;
+      border: none;
+      outline: none;
+      padding: 0.2rem 0.5rem;
+      font-size: 0.8rem;
+    }
+    .card {
+      text-align: center;
+      width: 11.5rem;
+    }
+    .discountColor {
+      color: green;
+    }
+    .priceContainer {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.8rem;
+    }
+    .oldPrice {
+      text-decoration: line-through;
+    }
+
+  }
+
+  .footer {
+    background: #000000;
+    padding: 1rem;
+    color: white;
+    text-align: center;
+  }
+}
+
+.cartContainer {
+  height: 100vh;
+  margin-top: .2rem;
+  .cartImgContainer {
+    width: 100px;
+  }
+  .priceContainer {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 12px;
+    font-weight: bold;
+    .discountColor {
+      color: green;
+    }
+    .oldPrice {
+      text-decoration: line-through;
+    }
+  }
+  .qty {
+    width: 28px;
+    border-radius: 20px;
+    border: 0.5px solid black;
+    outline: none;
+    background: white;
+    font-size: 18px;
+  }
+  .qtyInput {
+    width: 30px;
+    outline: none;
+    margin: 0px 0.5rem;
+    text-align: center;
+  }
+  .cartRemoveBtn {
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    margin-top: 1rem;
+    width: 101px;
+    font-size: 14px;
+  }
+}
+
+.filterModalContainer {
+  display: flex;
+  flex-direction: column;
+  label {
+    margin-left: 5px;
+  }
+
+  .filterBody{
+    padding: 1rem;
+  }
+
+  .filterCancelApply {
+    display: flex;
+    width: 100%;
+    text-align: center;
+    border: 0.5px solid black;
+  }
+
+  .filterCancel {
+    width: 50%;
+    border-right: 0.5px solid black;
+    color: rgb(65, 65, 190);
+    font-weight: bold;
+    padding: 0.5rem;
+    cursor: pointer;
+  }
+  .filterApply {
+    width: 50%;
+    color: rgb(65, 65, 190);
+    font-weight: bold;
+    padding: 0.5rem;
+    cursor: pointer;
+  }
+
+  .filterApply:hover,
+  .filterCancel:hover {
+    background: #eee;
+  }
+}
+
+
+@media(min-width:768px){
+  .hide4Web{
+    display: none !important;
+  }
+  .productContainer {
+justify-content: normal !important;
+width: 80%;
+
+.card{
+margin: .5rem !important;
+}
+  }
+
+  .hide4Mobile{
+    display: block !important;
+  }
+  .filterColumn{
+width: 20%;
+padding: 1rem;
+
+.sideMenuFilterBody{
+  text-align: center;
+}
+.applyBtn{
+  border-radius: 20px;
+  background: rgb(65, 65, 190);
+  color: white;
+  border: none;
+  outline: none;
+  width: 100px;
+  padding: .2rem;
+  margin: .2rem;
+}
+  }
+
+  .cartContainer{
+    margin-top: 1rem;
+
+    .cartImgContainer{
+width: 150px;
+    }
+    .cartBody4Web{
+      display: flex;
+      justify-content: space-evenly;
+    }
+    .priceContainer{
+      flex: .5;
+      display: flex;
+      align-items: center
+    }
+    .cartRemoveBtn{
+      margin-top: 0px !important;
+    }
+    .card-title{
+      margin-left: 12% !important;
+      margin-top: 1rem;
+    }
+    .card-text{
+      margin-bottom: 0px !important;
+    }
+  }
+
+}
+
+
